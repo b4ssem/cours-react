@@ -18,8 +18,42 @@
     <div id="root"></div>
 
     <script type="text/babel">
+
+        function MonComposant({test,abc}){
+            function handleClick() {
+                alert(`Vous avez cliqué`);
+            }
+            const[age,setAge]=
+            React.useState(18);
+            const [count, setCount] =
+            React.useState(0);
+            return(
+                <section>
+                    <h2>Mon composant est {test}, je m'appelle {abc}</h2>
+                    <button onClick={handleClick}>Activer clic</button>
+                    <button onClick={() => setCount(count + 1)}>
+                    Vous avez cliqué {count} fois
+                    </button>
+                    <br/>
+                    <h2>Vous avez {age}</h2>
+                    <button onClick={() => setAge(age + 1)}>
+                    +1
+                    </button>
+                    <button onClick={() => setAge(age + 5)}>
+                    +5
+                    </button>
+                </section>)
+                
+        }
+
         function MyApp() {
-            return <h1>Hello, world!</h1>;
+            return(
+                <div>
+                    <h1>Hello, world!</h1>
+                    <MonComposant 
+                    test = {"bien"} abc = {"Bassem"} />
+                </div>
+            );
         }
 
         const container = document.getElementById('root');
