@@ -55,7 +55,7 @@
        const FormLine = ({label, input}) => {;
         return <div className="lineForm">
                     <label for={input.id}>{label}</label>
-                    <input type="text" id={input.id} name={input.name} value={input.value}/> 
+                    <input type="text" id={input.id} name={input.name} defaultValue={input.value}/> 
                 </div>;
         }
 
