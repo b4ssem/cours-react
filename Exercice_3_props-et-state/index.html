@@ -26,13 +26,13 @@
             const[age,setAge]=
             React.useState(18);
             const [count, setCount] =
-            React.useState(0);
+            React.useState(1);
             return(
                 <section>
                     <h2>Mon composant est {test}, je m'appelle {abc}</h2>
                     <button onClick={handleClick}>Activer clic</button>
-                    <button onClick={() => setCount(count + 1)}>
-                    Vous avez cliqué {count} fois
+                    <button onClick={() => setCount(Math.floor(Math.random() * 100) + 1)}>
+                    Nombre aléatoire: {count} 
                     </button>
                     <br/>
                     <h2>Vous avez {age}</h2>
